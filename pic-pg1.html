@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Swaranya</title>
+    <link rel="stylesheet" href="picpg1.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playpen+Sans:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playpen+Sans:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+</head>
+
+
+<body>
+
+    <main class="page">
+
+        <!-- =========================
+             TITLE
+        ========================== -->
+
+        <section class="intro">
+
+            <p class="eyebrow">
+                A little memory for you
+            </p>
+
+            <h1>
+                Happy Birthday, Baby ❤️
+            </h1>
+
+            <p class="subtitle">
+                One year of memories, laughter, late-night talks & so much more.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             MEMORY SECTION
+        ========================== -->
+
+        <section class="memory-scene">
+
+
+            <!-- CD -->
+
+            <img
+                src="./assets/cd-img-removebg-preview.png"
+                alt="Pink CD"
+                class="cd"
+            >
+
+
+            <!-- =========================
+                 POLAROID 1
+            ========================== -->
+
+            <figure class="polaroid polaroid-one">
+
+                <div class="media">
+
+                    <img
+                        src="./assets/pic1.jpeg"
+                        alt="Our first meet"
+                    >
+
+                </div>
+
+
+                <figcaption>
+                    Ahh !! Our first meet
+                </figcaption>
+
+            </figure>
+
+
+
+            <!-- =========================
+                 POLAROID 2
+            ========================== -->
+
+            <figure class="polaroid polaroid-two">
+
+                <div class="media">
+
+                    <img
+                        src="./assets/pic2.jpeg"
+                        alt="Our shy and nervous moment"
+                    >
+
+                </div>
+
+
+                <figcaption>
+                    Look how shy & nervous we were 😂
+                </figcaption>
+
+            </figure>
+
+
+
+            <!-- =========================
+                 POLAROID 3 - VIDEO
+            ========================== -->
+
+            <figure class="polaroid polaroid-three">
+
+                <div class="media video-wrap">
+
+                    <video
+                        src="./assets/pic3.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="auto"
+                    ></video>
+
+                </div>
+
+
+                <figcaption>
+                    Even through a screen you always know exactly how to make me smile like this🤧
+                </figcaption>
+
+            </figure>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             NEXT BUTTON
+        ========================== -->
+
+        <div class="button">
+
+            <a href="pic-pg2.html">
+                next >>
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const video = document.querySelector("video");
+
+        if (video) {
+
+            video.play().catch(() => {
+
+                console.log("Autoplay waiting for browser permission.");
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

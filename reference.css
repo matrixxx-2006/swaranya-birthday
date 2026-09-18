@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  position: relative;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./assets/spiral-background.jpg);
+  background-repeat: none;
+  background-size: cover;
+  position: relative;
+}
+
+.sub-parent {
+  width: 80%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 10%;
+}
+
+.image {
+  rotate: 8deg;
+  height: 70%;
+  border-radius: 15px;
+  animation: slideRight 1s ease-out forwards;
+}
+
+.para-bg {
+  width: 35%;
+  background-image: url(./assets/text-background.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  animation: slideUp 1s ease-out forwards;
+}
+
+.para-bg p {
+  width: 68%;
+  font-size: 1.5em;
+  font-family: "Dancing Script", cursive;
+}
+
+.button {
+  font-family: "Playpen Sans", cursive;
+  font-size: 1.5em;
+  font-weight: 600;
+  position: absolute;
+  bottom: 5%;
+}
+.button a {
+  text-decoration: none;
+  color: black;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translatex(-100vw);
+  }
+
+  to {
+    transform: translateY(0);
+    transform: translateY(15%);
+  }
+}

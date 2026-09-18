@@ -1,0 +1,1327 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    font-family:
+        "Playpen Sans",
+        cursive;
+
+
+    color:
+        #3d2530;
+
+
+    /* SAME BACKGROUND */
+
+    background-image:
+        url("./assets/spiral-background.jpg");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    background-attachment:
+        fixed;
+
+    background-repeat:
+        no-repeat;
+
+}
+
+
+
+/* =========================================
+   DARK / PINK OVERLAY
+========================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(255, 190, 220, 0.22);
+
+    pointer-events: none;
+
+    z-index: -5;
+
+}
+
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.end-page {
+
+    position:
+        relative;
+
+    min-height:
+        100vh;
+
+    width:
+        100%;
+
+    padding:
+        55px 25px 40px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+}
+
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    text-align:
+        center;
+
+    z-index:
+        5;
+
+    animation:
+        introIn
+        1s
+        ease
+        both;
+
+}
+
+
+
+.eyebrow {
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        0.9rem;
+
+    letter-spacing:
+        0.18em;
+
+    text-transform:
+        uppercase;
+
+    font-weight:
+        600;
+
+    color:
+        #8f3b61;
+
+}
+
+
+
+h1 {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        clamp(3.2rem, 8vw, 6rem);
+
+    line-height:
+        1;
+
+    font-weight:
+        700;
+
+    color:
+        #76294d;
+
+    text-shadow:
+        0 4px 0
+        rgba(255,255,255,0.7);
+
+}
+
+
+
+h1 span {
+
+    display:
+        inline-block;
+
+    color:
+        #e34d83;
+
+    animation:
+        heartbeat
+        1.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+
+.subtitle {
+
+    margin-top:
+        14px;
+
+    font-size:
+        clamp(0.8rem, 1.5vw, 1rem);
+
+    color:
+        #5b3746;
+
+}
+
+
+
+/* =========================================
+   COUPON SECTION
+========================================= */
+
+.coupon-section {
+
+    position:
+        relative;
+
+    width:
+        min(700px, 90vw);
+
+    height:
+        clamp(330px, 45vw, 480px);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        5px auto 0;
+
+}
+
+
+
+/* =========================================
+   COUPON GLOW
+========================================= */
+
+.coupon-glow {
+
+    position:
+        absolute;
+
+    width:
+        min(500px, 70vw);
+
+    aspect-ratio:
+        1;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255, 89, 158, 0.30);
+
+    filter:
+        blur(75px);
+
+    animation:
+        glowPulse
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+
+/* =========================================
+   COUPON CARD
+========================================= */
+
+.coupon-card {
+
+    position:
+        relative;
+
+    width:
+        min(560px, 82vw);
+
+    padding:
+        20px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+
+    /* Glass card */
+
+    background:
+        rgba(255, 255, 255, 0.30);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.7);
+
+    border-radius:
+        25px;
+
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(102, 32, 65, 0.30),
+
+        inset 0 0 30px
+        rgba(255,255,255,0.25);
+
+
+    backdrop-filter:
+        blur(8px);
+
+
+    transform:
+        rotate(-2deg);
+
+
+    animation:
+        couponEntrance
+        1.2s
+        cubic-bezier(.2,.8,.2,1)
+        0.3s
+        both;
+
+
+    transition:
+        transform
+        0.45s
+        ease;
+
+}
+
+
+
+.coupon-card:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.04)
+        translateY(-8px);
+
+}
+
+
+
+.coupon-card img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    max-height:
+        380px;
+
+    object-fit:
+        contain;
+
+
+    /* Gives transparent PNG a little depth */
+
+    filter:
+        drop-shadow(
+            0 18px 18px
+            rgba(55, 15, 35, 0.30)
+        );
+
+}
+
+
+
+/* =========================================
+   SPARKLES
+========================================= */
+
+.sparkle {
+
+    position:
+        absolute;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 12px
+        rgba(255,255,255,0.9);
+
+    animation:
+        sparkle
+        2.5s
+        ease-in-out
+        infinite;
+
+    z-index:
+        5;
+
+}
+
+
+
+.sparkle-1 {
+
+    top:
+        10%;
+
+    left:
+        8%;
+
+    font-size:
+        2rem;
+
+}
+
+
+
+.sparkle-2 {
+
+    top:
+        22%;
+
+    right:
+        8%;
+
+    font-size:
+        1.4rem;
+
+    animation-delay:
+        0.7s;
+
+}
+
+
+
+.sparkle-3 {
+
+    bottom:
+        15%;
+
+    left:
+        15%;
+
+    font-size:
+        1.5rem;
+
+    animation-delay:
+        1.2s;
+
+}
+
+
+
+.sparkle-4 {
+
+    bottom:
+        10%;
+
+    right:
+        14%;
+
+    font-size:
+        2rem;
+
+    animation-delay:
+        1.8s;
+
+}
+
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+
+    position:
+        relative;
+
+    text-align:
+        center;
+
+    max-width:
+        650px;
+
+    margin-top:
+        -10px;
+
+    animation:
+        messageIn
+        1s
+        ease
+        1s
+        both;
+
+}
+
+
+
+.main-message {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        clamp(1.6rem, 3vw, 2.3rem);
+
+    font-weight:
+        700;
+
+    color:
+        #76294d;
+
+}
+
+
+
+.tiny-message {
+
+    max-width:
+        550px;
+
+    margin:
+        12px auto 0;
+
+    font-size:
+        clamp(0.78rem, 1.4vw, 0.95rem);
+
+    line-height:
+        1.7;
+
+    color:
+        #533641;
+
+}
+
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+    margin:
+        20px 0 10px;
+
+}
+
+
+
+.divider::before,
+.divider::after {
+
+    content:
+        "";
+
+    width:
+        70px;
+
+    height:
+        1px;
+
+    background:
+        rgba(118, 41, 77, 0.4);
+
+}
+
+
+
+.divider span {
+
+    color:
+        #c63870;
+
+    font-size:
+        1.1rem;
+
+}
+
+
+
+.final-message {
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        1.35rem;
+
+    color:
+        #76294d;
+
+}
+
+
+
+/* =========================================
+   RESTART BUTTON
+========================================= */
+
+.restart-container {
+
+    margin-top:
+        28px;
+
+    animation:
+        buttonIn
+        1s
+        ease
+        1.3s
+        both;
+
+}
+
+
+
+.restart-button {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+
+    padding:
+        12px 24px;
+
+
+    text-decoration:
+        none;
+
+
+    font-family:
+        "Playpen Sans",
+        cursive;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        600;
+
+
+    color:
+        #542337;
+
+
+    background:
+        rgba(255,255,255,0.55);
+
+
+    border:
+        1px solid
+        rgba(255,255,255,0.8);
+
+
+    border-radius:
+        50px;
+
+
+    box-shadow:
+
+        0 8px 25px
+        rgba(91, 27, 57, 0.16);
+
+
+    backdrop-filter:
+        blur(7px);
+
+
+    transition:
+        all
+        0.3s
+        ease;
+
+}
+
+
+
+.restart-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    background:
+        rgba(255,255,255,0.8);
+
+    box-shadow:
+
+        0 14px 30px
+        rgba(91, 27, 57, 0.25);
+
+}
+
+
+
+.restart-icon {
+
+    font-size:
+        1.35rem;
+
+    transition:
+        transform
+        0.5s
+        ease;
+
+}
+
+
+
+.restart-button:hover .restart-icon {
+
+    transform:
+        rotate(-360deg);
+
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    margin-top:
+        auto;
+
+    padding-top:
+        35px;
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        1.15rem;
+
+    color:
+        #79415a;
+
+    opacity:
+        0.8;
+
+}
+
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-hearts {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    overflow:
+        hidden;
+
+    pointer-events:
+        none;
+
+    z-index:
+        1;
+
+}
+
+
+
+.floating-hearts span {
+
+    position:
+        absolute;
+
+    bottom:
+        -50px;
+
+    color:
+        rgba(173, 44, 100, 0.38);
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    animation:
+        floatUp
+        linear
+        infinite;
+
+}
+
+
+
+.floating-hearts span:nth-child(1) {
+
+    left:
+        7%;
+
+    font-size:
+        2rem;
+
+    animation-duration:
+        12s;
+
+    animation-delay:
+        1s;
+
+}
+
+
+
+.floating-hearts span:nth-child(2) {
+
+    left:
+        20%;
+
+    font-size:
+        1.2rem;
+
+    animation-duration:
+        15s;
+
+    animation-delay:
+        5s;
+
+}
+
+
+
+.floating-hearts span:nth-child(3) {
+
+    left:
+        38%;
+
+    font-size:
+        2.5rem;
+
+    animation-duration:
+        13s;
+
+    animation-delay:
+        2s;
+
+}
+
+
+
+.floating-hearts span:nth-child(4) {
+
+    left:
+        55%;
+
+    font-size:
+        1.5rem;
+
+    animation-duration:
+        16s;
+
+    animation-delay:
+        7s;
+
+}
+
+
+
+.floating-hearts span:nth-child(5) {
+
+    left:
+        72%;
+
+    font-size:
+        2.2rem;
+
+    animation-duration:
+        11s;
+
+    animation-delay:
+        3s;
+
+}
+
+
+
+.floating-hearts span:nth-child(6) {
+
+    left:
+        84%;
+
+    font-size:
+        1.4rem;
+
+    animation-duration:
+        14s;
+
+    animation-delay:
+        8s;
+
+}
+
+
+
+.floating-hearts span:nth-child(7) {
+
+    left:
+        94%;
+
+    font-size:
+        2rem;
+
+    animation-duration:
+        12s;
+
+    animation-delay:
+        4s;
+
+}
+
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes introIn {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(-35px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes couponEntrance {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(80px)
+            scale(0.8)
+            rotate(-8deg);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1)
+            rotate(-2deg);
+
+    }
+
+}
+
+
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+
+        transform:
+            scale(0.9);
+
+        opacity:
+            0.45;
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.1);
+
+        opacity:
+            0.75;
+
+    }
+
+}
+
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    15% {
+
+        transform:
+            scale(1.15);
+
+    }
+
+    30% {
+
+        transform:
+            scale(1);
+
+    }
+
+    45% {
+
+        transform:
+            scale(1.08);
+
+    }
+
+    60% {
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+
+        opacity:
+            0.3;
+
+        transform:
+            scale(0.8)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.3)
+            rotate(20deg);
+
+    }
+
+}
+
+
+
+@keyframes messageIn {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes buttonIn {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes floatUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity:
+            0;
+
+    }
+
+    10% {
+
+        opacity:
+            0.7;
+
+    }
+
+    80% {
+
+        opacity:
+            0.4;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(25deg);
+
+        opacity:
+            0;
+
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .end-page {
+
+        padding:
+            35px
+            15px
+            25px;
+
+    }
+
+
+    .coupon-section {
+
+        height:
+            310px;
+
+    }
+
+
+    .coupon-card {
+
+        width:
+            90vw;
+
+        padding:
+            12px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .coupon-card img {
+
+        max-height:
+            270px;
+
+    }
+
+
+    .sparkle-1 {
+
+        left:
+            2%;
+
+    }
+
+
+    .sparkle-2 {
+
+        right:
+            2%;
+
+    }
+
+
+    .main-message {
+
+        font-size:
+            1.5rem;
+
+    }
+
+
+    .tiny-message {
+
+        padding:
+            0 15px;
+
+    }
+
+
+    footer {
+
+        padding-top:
+            25px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+
+    }
+
+}

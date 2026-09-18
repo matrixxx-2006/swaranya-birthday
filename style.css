@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(./assets/spiral-background.jpg);
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+}
+
+.content-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5vh;
+    height: 100vh;
+}
+
+.image {
+    width: 35%;
+    animation: heartbeat 1.2s infinite;
+}
+
+.heading {
+    font-size: 5em;
+    font-weight: 400;
+    font-family: "Dancing Script", cursive;
+}
+
+.sub-heading {
+    font-size: 2em;
+    font-family: "Playpen Sans", cursive;
+}
+
+.button {
+    font-family: "Playpen Sans", cursive;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.button a {
+    text-decoration: none;
+    color: black;
+}
+
+.bottom-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.15);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.15);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
